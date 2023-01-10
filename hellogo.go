@@ -28,7 +28,10 @@ func main() {
 	// 	}
 	print("What is your name")
 	var name string // this will make the variable name a string
-	scan(&name)
+	n, err := scan(&name)
+	if err != nil || n == 0 {
+		print("Invalid name")
+	}else {
 	name = strings.ToLower(name)
 	if name == "christian" {
 		print("We have the same name")
@@ -37,5 +40,7 @@ func main() {
 	} else {
 		print("We do not have the same name")
 	}
+
+}
 
 }
