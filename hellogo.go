@@ -19,7 +19,7 @@ func main() {
 	name = strings.ToLower(name) // makes the name lowercase before conditionals
 	if name == "christian" {
 		print("We have the same name")
-	} else if (string(name[0]) == "c") && (name != "christian") { // we have to cast name[0] because the value is a byte. A string is really just an array of bytes...
+	} else if (string(name[0]) == "c") { // we have to cast name[0] because the value is a byte. A string is really just an array of bytes...
 		print("We have the same first letter")
 	} else {
 		print("We do not have the same name")
